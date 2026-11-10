@@ -137,11 +137,6 @@ END;
 $$ LANGUAGE plpgsql;
 
 
--- 1. Carga de Dados Básica (IDs 1, 2, 3... autogerados)
-INSERT INTO mesa (mesa_codigo, mesa_area_restaurante) VALUES ('M01', 'INTERNA');
-INSERT INTO funcionario (funcionario_codigo, funcionario_nome, funcionario_comissao) VALUES ('F01', 'Carlos Silva', 5.00);
-INSERT INTO produto (produto_codigo, produto_nome, produto_valor) VALUES ('P01', 'Pizza Calabresa', 50.00);
-select * from mesa;
 
 -- 2. Testando a Function 1 e 2
 SELECT retorna_nome_funcionario(1); -- Retorna: "Carlos Silva - Funcionário Ativo"
